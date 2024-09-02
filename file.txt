@@ -1,0 +1,52 @@
+Django Assessment Programming Test
+Duration: 3-5 hours
+Objective: The purpose of this assessment is to evaluate the candidate's understanding of Django, REST APIs, databases, and best practices in web development.
+
+Assessment Overview
+You will create a simple Django application that serves as an online bookstore. In this application, users can view a list of books, retrieve details for a specific book, create new books, update existing books, and delete books. The application will also include user authentication, so users need to be registered or logged in to create, update, or delete books.
+Requirements
+1.Project Setup:
+•Use Django (version 3.x or 4.x) and Django REST Framework.
+•Ensure proper project structure.
+•Include requirements.txt for any dependencies.
+2.Models: Create the following models:
+•User: Use Django's built-in User model for authentication.
+•Book: This model should contain the following fields:
+•title: CharField
+•author: CharField
+•description: TextField
+•published_date: DateField
+•price: DecimalField
+•created_at: DateTimeField (auto_now_add=True)
+•updated_at: DateTimeField (auto_now=True)
+•Implement basic validation (e.g., title must not be empty).
+3.API Endpoints: Implement the following API endpoints using Django REST Framework:
+•GET /api/books/: List all books.
+•GET /api/books/{id}/: Retrieve a specific book by ID.
+•POST /api/books/: Create a new book (requires authentication).
+•PUT /api/books/{id}/: Update an existing book (requires authentication).
+•DELETE /api/books/{id}/: Delete a book (requires authentication).
+4.User Authentication:
+•Implement JWT (JSON Web Token) authentication using Django REST Framework's djangorestframework_simplejwt package.
+•Create endpoints for user registration (POST /api/register/) & user login (POST /api/login/), which issue a token upon successful authentication.
+5.Frontend (optional, for additional points):
+•If time permits, create a simple HTML/JS frontend using any framework (like React, Vue.js, or even plain HTML/CSS/JavaScript) to interact with the API.
+•Ensure the frontend allows users to perform CRUD operations on the books through the API.
+6.Testing:
+•Write unit tests for your models and API views using Django's TestCase.
+•Ensure to include tests for edge cases (e.g., unauthorized access, invalid data).
+7.Documentation:
+•Write clear documentation on how to set up and run the application.
+•Include API documentation (e.g., using Swagger or markdown file).
+Evaluation Criteria
+•Code Quality: Readability, organization, and adherence to Django best practices.
+•Functionality: The application should function as specified, with all features implemented correctly.
+•Testing: Sufficient coverage in tests; handling of edge cases.
+•Documentation: Clear instructions for setup, running the application, and using the API.
+•Time Management: Ability to prioritize tasks and complete within the given timeframe.
+Submission
+•Please push your code to a GitHub repository and share the link with us upon completion of the assessment.
+•Ensure that your repository is publicly accessible or provide read access if it is private.
+
+Note: This assessment is designed to be true to real-world tasks a Django developer might face, encouraging creativity and practical problem-solving. Good luck!
+
