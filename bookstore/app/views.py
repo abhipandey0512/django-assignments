@@ -28,8 +28,7 @@ class SignupView(generics.CreateAPIView):
         refresh_token = str(refresh)
         
         user_data = SignupSerializer(user).data
-        user_data = SignupSerializer(user).data
-        return Response({
+          return Response({
             'message': 'Signup successful',
             'user': user_data,
              'access': access_token,
