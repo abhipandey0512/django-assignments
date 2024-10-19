@@ -130,7 +130,7 @@ def delete_records(self, request, id):
 # logout
 @api_view(['LOGOUT])
 @permisson_classes([IsAuthenticated])
-def logut(request):
+def logout(request):
            return Response(Loginserializer,status=status.HTTP_200_OK) # maybe correction needed
                           
            
