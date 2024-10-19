@@ -122,9 +122,19 @@ def update_collection(request,id):
 
 @api_view(['DELETE'])  
 @permission_classes([IsAuthenticated])
- 
+
 def delete_records(self, request, id):
     books_id=books.objects.get(id=id)
     books_id.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
+# logout
+@api_view(['LOGOUT])
+@permisson_classes([IsAuthenticated])
+def logut(request):
+           return Response(Loginserializer,status=status.HTTP_200_OK) # maybe correction needed
+                          
+           
+
+         
+           
     
