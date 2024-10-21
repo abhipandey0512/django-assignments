@@ -70,6 +70,9 @@ class CreateBookView(generics.CreateAPIView):
     serializer_class = BookSerializer
     permission_classes=[IsAuthenticated]
 
+@apiview['GET')
+         
+
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -118,21 +121,33 @@ def update_collection(request,id):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+#Update_Book_Library
+
+@api_view(['PUT','PATCH'])
+ def book_update(request):
+     serializer=Bookserializer(data=request.data, PATCH= Partiali.data) #orm quary 
+     if serializer.is_valid():
+         serializer.save()
+         return Response({'message:Update Succesfully', serializer.data, status = status.HTTP_200_OK) # error 
+           
 #delete.books
 
 @api_view(['DELETE'])  
 @permission_classes([IsAuthenticated])
-
 def delete_records(self, request, id):
     books_id=books.objects.get(id=id)
     books_id.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
-# logout
+
+
+    
+# Logout
 @api_view(['LOGOUT])
 @permisson_classes([IsAuthenticated])
 def logout(request):
+    token  = Token.filter.delete()
     serializer_class = Loginserializer 
-    return Response({'message':'Thank You For Login',Loginserializer,status=status.HTTP_200_OK) #maybe correction needed
+    return Response({'message':'Thank You For Login',Loginserializer,status=status.HTTP_200_OK) #maybe correction needed & token query
                           
            
 
