@@ -146,7 +146,7 @@ def delete_records(self, request, id):
 def logout(request):
     token  = Token.filter.delete()
     serializer_class = Loginserializer 
-    return Response({'message':'Thank You For Login',Loginserializer,status=status.HTTP_200_OK) #maybe correction needed & instant token delete.
+    return Response({'message:'Thank You For Login',Loginserializer,status=status.HTTP_200_OK) #maybe correction needed & instant token delete.
                           
            
 
