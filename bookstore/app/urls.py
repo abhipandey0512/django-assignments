@@ -8,6 +8,6 @@ urlpatterns = [
     path('record_list/',ListBook,name='record_list'),
     path('books/<int:id>/', update_collection, name='book-update'),
     path('delete/<int:id>/', delete_records, name='delete'),
-    
-    
+    path('logout/',logout,name='logout'),
+        
 ]
