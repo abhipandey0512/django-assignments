@@ -1,5 +1,4 @@
 Django Assessment Programming Test
-Duration: 3-5 hours
 Objective: The purpose of this assessment is to evaluate the candidate's understanding of Django, REST APIs, databases, and best practices in web development.
 
 Assessment Overview
@@ -47,6 +46,5 @@ Evaluation Criteria
 Submission
 •Please push your code to a GitHub repository and share the link with us upon completion of the assessment.
 •Ensure that your repository is publicly accessible or provide read access if it is private.
-
 Note: This assessment is designed to be true to real-world tasks a Django developer might face, encouraging creativity and practical problem-solving. Good luck!
 
