@@ -139,15 +139,14 @@ def delete_records(self, request, id):
     books_id.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
 
-
-    
+   
 # Logout
 @api_view(['LOGOUT])
 @permisson_classes([IsAuthenticated])
 def logout(request):
     token  = Token.filter.delete()
     serializer_class = Loginserializer 
-    return Response({'message':'Thank You For Login',Loginserializer,status=status.HTTP_200_OK) #maybe correction needed & token query
+    return Response({'message':'Thank You For Login',Loginserializer,status=status.HTTP_200_OK) #maybe correction needed & instant token delete.
                           
            
 
